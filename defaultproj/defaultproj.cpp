@@ -4,7 +4,7 @@
 #include <ctime>
 #include <stdio.h>
 #include <cstring>
-#include "class.h"
+#include "class1.h"
 
 int main()
 {
