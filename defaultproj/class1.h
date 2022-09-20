@@ -1,14 +1,27 @@
 #pragma once
+#include <cstring>
+#include <iostream>
+#include <conio.h>
+#include <tuple>
+#include <ctime>
+#include <stdio.h>
+#include <cstring>
+using std::string;
+using std::cout;
+using std::endl;
+using std::cin;
 class data
 {
 public:
 	data();
 	~data();
-	data(std::string, std::string, int, int);
+	data(string, string, int, bool);
+	void print();
+	void modify(string, string, int, bool);
 	
 private:
-	std::string _first_name;
-	std::string _last_name;
+	string _first_name;
+	string _last_name;
 	bool _sex;
 	int _age;
 };

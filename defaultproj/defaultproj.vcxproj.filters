@@ -18,9 +18,12 @@
     <ClCompile Include="defaultproj.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="class1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="class.h">
+    <ClInclude Include="class1.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
