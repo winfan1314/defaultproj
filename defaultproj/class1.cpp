@@ -32,6 +32,18 @@ void data::modify(string firstname, string lastname, int age, bool sex)
 	_last_name = lastname;
 	_sex = sex;
 	_age = age;
+	return;
+
+void data::modify_f(string firstname)
+{
+	_first_name = firstname;
+	return;
+}
+
+void data::modify_l(string lastname)
+{
+	_last_name = lastname;
+	return;
 }
 
 data::~data()
