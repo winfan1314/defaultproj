@@ -10,6 +10,7 @@ using std::string;
 using std::cout;
 using std::endl;
 using std::cin;
+
 class data
 {
 public:
@@ -22,6 +23,9 @@ public:
 	void modify_l(string);
 	void modify_s(bool);
 	void modify_a(int);
+	data operator=(const data&);
+	void swap(data&, data&);
+
 private:
 	string _first_name;
 	string _last_name;
