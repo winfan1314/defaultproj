@@ -46,10 +46,21 @@ void data::modify_l(string lastname)
 	return;
 }
 
-void data::modify_s(bool sex)
+void data::modify_s(_sex_type sex)
 {
-	_sex = sex;
-	return;
+		switch (sex)
+		{
+		case male:
+		{
+			_sex = true;
+			return;
+		}
+		case female:
+		{
+			_sex = false;
+			return;
+		}
+		}
 }
 
 void data::modify_a(int age)
@@ -60,16 +71,11 @@ void data::modify_a(int age)
 
 data data::operator=(const data& l)
 {
-	data temp;
-	temp._first_name = l._first_name;
 	_first_name = l._first_name;
-	temp._last_name = l._last_name;
 	_last_name = l._last_name;
-	temp._age = l._age;
 	_age = l._age;
-	temp._sex = l._sex;
 	_sex = l._sex;
-	return temp;
+	return *this;
 }
 
 void data::swap(data& a,data& b)
@@ -79,6 +85,47 @@ void data::swap(data& a,data& b)
 	a = b;
 	b = tmp;
 	return;
+}
+
+void data::modify_typ(_mod_type _typ)
+{
+	switch (_typ)
+	{
+	case error:
+		return;
+	case firstname:
+	{
+		string firstn;
+		cout << "insert firstname:";
+		cin >> firstn;
+		modify_f(firstn);
+		return;
+	}
+	case lastname:
+	{
+		string lastn;
+		cout << "insert lastname:";
+		cin >> lastn;
+		modify_l(lastn);
+		return;
+	}
+	case age:
+	{
+		int age_t;
+		cout << "insert age:";
+		cin >> age_t;
+		modify_a(age_t);
+		return;
+	}
+	case sex:
+	{
+		string sex_s;
+		cout << "insert sex(male,female):";
+		cin >> sex_s;
+		modify_s(convert_to_sextyp(sex_s));
+		return;
+	}
+	}
 }
 
 data::~data()
