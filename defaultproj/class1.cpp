@@ -1,5 +1,4 @@
 #include"class1.h"
-
 data::data()
 {
 	_first_name = "firstname";

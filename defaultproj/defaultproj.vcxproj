@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="class1.cpp" />
     <ClCompile Include="defaultproj.cpp" />
+    <ClCompile Include="functions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class1.h" />

@@ -39,14 +39,15 @@ int main()
         else cout << "ERROR : wrong sex,data won't be saved\nretry" << endl;
     }
     cout << "Data \"profile2\"saved." << endl << endl;
-
+    //print original
     cout << "printing \"pofile1\"" << endl;
     profile1.print();
     cout << endl;
     cout << "printing \"pofile2\"" << endl;
     profile2.print();
+    //swap profile1&profile2
     cout << endl << "swap!" << endl;
-    profile1.swap(profile1, profile2);
+    swap_o(profile1, profile2);
     cout << "printing \"pofile1\"" << endl;
     profile1.print();
     cout << endl;
